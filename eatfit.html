@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIT GYM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+
+    <style> p {
+        text-decoration-style: dashed;
+    }</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-custom">
+        <a href="#" class="navbar-brand"><img src="slike\logoo.png" alt="" height="120px"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myDropdown" aria-controls="myDropdown" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="myDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">POČETNA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="onama.html"> O NAMA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="programi.html">PROGRAMI</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="galerija.html">GALERIJA</a>
+                </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="eatfit.html">EAT FIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="kontakt.html">KONTAKT</a>
+              </li>
+            </ul>
+          </div>
+
+    </nav>
+
+    <div class="container-fluid">
+      <div class="text-center naslov">
+        <h1>Izračunaj svoj unos kalorija</h1>
+
+        <p>Naš kalkulator</p>
+        <hr/>
+      </div>
+      <div class="container">
+        <fieldset class="form-group">
+           <div class="row">
+             <legend class="col-form-label col-sm-2 pt-0">Pol</legend>
+             <div class="col-sm-10">
+               <div id="vreme" class="form-check">
+                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="z" checked>
+                 <label class="form-check-label" for="gridRadios1">
+                   Ženski
+                 </label>
+               </div>
+               <div class="form-check">
+                 <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="m">
+                 <label class="form-check-label" for="gridRadios2">
+                   Muški
+                 </label>
+               </div>
+             </div>
+           </div>
+         </fieldset>
+
+        <label for="tezina">Težina</label>
+        <input id="tezina" class="form-control" type="text">
+
+        <label for="visina">Visina</label>
+        <input id="visina" class="form-control" type="text">
+
+        <label for="godine">Godine</label>
+        <input id="godine" class="form-control" type="text">
+        <label for="aktivnost">Aktivnost</label>
+         <select class="custom-select mr-sm-2 form-control" id="aktivnost">
+          <option selected>Izaberite</option>
+           <option value="1.2">Bez vežbi</option>
+           <option value="1.375">Malo vežbanja</option>
+           <option value="1.55">Srednje vežbanje</option>
+           <option value="1.725">Intezivno vežbanje</option>
+           <option value="1.9">Naporni treninzi</option>
+         </select>
+         <br>
+         <br>
+         <button onclick="izracunaj()" class="form-control btn-dark" type="button"> Izračunaj Broj Kalorija </button>
+     </div>
+    </div>
+    <footer>
+      <hr>
+      <div class="text-right">
+        <h5 class="footer-text">by Aleksandra, Marija, Jelena
+          <script>
+          var dan = new Date();
+          var year = dan.getFullYear();
+          document.write('&copy;'+year);
+          </script>
+        </h5>
+      </div>
+    </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+    <script src="js/skripte.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+    function izracunaj(){
+        var pol = $('input[name=gridRadios]:checked').val();
+
+        var tezina = $("#tezina").val();
+        var visina = $("#visina").val();
+        var godine = $("#godine").val();
+        var aktivnost = $("#aktivnost").val();
+
+
+        if(pol == 'm'){
+          var vrednost = 66.4730 + (13.7516 * parseInt(tezina));
+          var vrednost1 = 5.0033 * parseInt(visina);
+          var vrednost2 = 6.7550 * parseInt(godine);
+          var bmr = parseFloat(vrednost) + parseFloat(vrednost1);
+          bmr = bmr - parseFloat(vrednost2);
+          var kalorije = bmr * parseFloat(aktivnost) ;
+          $.alert({
+            title: 'Kalorije!',
+            content: 'Vaš broj kalorija je : ' +kalorije,
+            type: 'green',
+        });
+        }
+
+        if(pol == 'z'){
+          var vrednost = 655.0955 + (9.5634 * parseInt(tezina));
+          var vrednost1 = 1.8496 * parseInt(visina);
+          var vrednost2 = 4.6756 * parseInt(godine);
+          var bmr = parseFloat(vrednost) + parseFloat(vrednost1);
+          bmr = bmr - parseFloat(vrednost2);
+          var kalorije = bmr * parseFloat(aktivnost) ;
+          $.alert({
+            title: 'Kalorije!',
+            content: 'Vaš broj kalorija je : ' +kalorije,
+            type: 'green',
+        });
+        }
+    }
+    </script>
+
+</body>
+</html>

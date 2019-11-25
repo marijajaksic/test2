@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIT GYM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+   
+
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-custom">
+        <a href="#" class="navbar-brand"><img src="slike\logoo.png" alt="" height="120px"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myDropdown" aria-controls="myDropdown" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="myDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="index.html">POČETNA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="onama.html">O NAMA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="programi.html">PROGRAMI</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="galerija.html">GALERIJA</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eatfit.html">EAT FIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="kontakt.html">KONTAKT</a>
+              </li>
+            </ul>
+          </div>
+
+    </nav>
+
+    <div class="container-fluid">
+      <div class="text-center naslov">
+        <h1>Zakaži besplatan probni trening</h1>
+
+        <p>Ukoliko niste sigurni da li želite da trenirate kod nas, možete besplatno probati neki od naših treninga</p>
+        <hr/>
+      </div>
+      <div class="container">
+        <form>
+            <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                    <label for="ime">Ime</label>
+                    <input type="text" name="ime" id="ime" class="form-control" required>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label for="prezime">Prezime</label>
+                    <input type="text" name="prezime" id="prezime" class="form-control" required>
+                  </div>
+                  <div class="col-md-12 mb-3">
+                    <label for="email">Email</label>
+                    <input type="email" name="mail" class="form-control" id="email" email>
+                  </div>
+
+                  <div class="col-md-12">
+                          <label class="mr-sm-2" for="tipTreninga">Trening program</label>
+                          <select class="custom-select mr-sm-2 form-control" id="tipTreninga">
+                            <option selected>Izaberite</option>
+                            <option  name="option" value="1">Teretana i kardio program</option>
+                            <option  name="option" value="2">Grupni fitness program</option>
+                          </select>
+                  </div>
+                  <div class="col-md-12">
+                          <label for="datum" >Datum</label>
+                          <input type="text" name="datum" id="datum" class="form-control"   required>
+                  </div>
+
+
+               </div>
+
+               <fieldset class="form-group">
+                  <div class="row">
+                    <legend class="col-form-label col-sm-2 pt-0">Vreme</legend>
+                    <div class="col-sm-10">
+                      <div id="vreme" class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="10:00-12:00" checked>
+                        <label class="form-check-label" for="gridRadios1">
+                          10:00-12:00
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="13:00-15:00">
+                        <label class="form-check-label" for="gridRadios2">
+                          13:00-15:00
+                        </label>
+                      </div>
+                      <div class="form-check disabled">
+                        <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios3" value="16:00-18:00">
+                        <label class="form-check-label" for="gridRadios3">
+                          16:00-18:00
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+
+          <button class="btn btn-dark" onclick="proveriFormu()" type="button" name="submit">Zakaži trening</button>
+          <br>
+          <hr/>
+           <div id="odgovorNaKlik">
+
+           </div>
+         </form>
+     </div>
+    </div>
+    <footer>
+      <hr>
+      <div class="text-right">
+        <h5 class="footer-text">by Aleksandra, Marija, Jelena
+          <script>
+          var dan = new Date();
+          var year = dan.getFullYear();
+          document.write('&copy;'+year);
+          </script>
+
+        </h5>
+      </div>
+    </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/skripte.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+        $( function() {
+          $( "#datum" ).datepicker();
+        });
+  </script>
+
+  <script>
+      function proveriFormu(){
+        var ime = $("#ime").val();
+        var prezime = $("#prezime").val();
+        var email = $("#email").val();
+        var tipTreninga = $("#tipTreninga").val();
+        var datum = $("#datum").val();
+        var vreme = $('input[name=gridRadios]:checked').val();
+
+        if(ime == '' || prezime == '' || email == '' || tipTreninga== '' || datum == '' || vreme == ''){
+          $("#odgovorNaKlik").html('<div class="alert alert-light" role="alert">Morate da popunite sva polja!</div>');
+        }else{
+          if(email.includes('@')){
+            $("#odgovorNaKlik").html('<div class="alert alert-dark" role="alert">Vaš trening je zakazan u '+ vreme +' dana '+ datum +' na ime '+ ime +' '+ prezime +' !</div>');
+          }else{
+            $("#odgovorNaKlik").html('<div class="alert alert-light" role="alert">Email mora imati @ u sebi!</div>');
+          }
+        }
+
+      }
+  </script>
+</body>
+</html>

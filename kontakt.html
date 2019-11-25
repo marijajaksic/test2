@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIT GYM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+    <style> p {
+        text-decoration-style: dashed;
+    }</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-custom">
+        <a href="#" class="navbar-brand"><img src="slike\logoo.png" alt="" height="120px"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myDropdown" aria-controls="myDropdown" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="myDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">POČETNA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="onama.html">O NAMA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="programi.html">PROGRAMI</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="galerija.html">GALERIJA</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eatfit.html">EAT FIT</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link " href="kontakt.html">KONTAKT</a>
+              </li>
+            </ul>
+          </div>
+
+    </nav>
+
+    <div class="container-fluid">
+      <div class="text-center naslov">
+        <h1>Kontakt</h1>
+
+        <p>Osnovne informacije.</p>
+        <hr/>
+      </div>
+      <div class="container">
+
+        <h3>Kontakt telefon: 066 2142342 </h3>
+        <h3>Adresa: Milutina Ivkovića </h3>
+        <h3>Radno vreme: 09h - 18h</h3>
+
+          <div style="width:100%;height: 545px;" id="map"></div>
+     </div>
+    </div>
+    <footer>
+      <hr>
+      <div class="text-right">
+        <h5 class="footer-text">by Aleksandra, Marija, Jelena
+          <script>
+          var dan = new Date();
+          var year = dan.getFullYear();
+          document.write('&copy;'+year);
+          </script>
+        </h5>
+      </div>
+    </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/skripte.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7VOlq37Xus3zlBn0G_aI5moS0LQKauh0"></script>
+    <script>
+      if(document.getElementById("map")){
+
+            google.maps.event.addDomListener(window, 'load', init);
+
+              function init() {
+
+                  var mapOptions = {
+                      zoom: 11,
+                      center: new google.maps.LatLng(44.787197,20.457273),
+
+                      styles: [
+                          {
+                              "featureType": "road",
+                              "elementType": "labels",
+                              "stylers": [
+                                  {
+                                      "visibility": "on"
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "poi",
+                              "stylers": [
+                                  {
+                                      "visibility": "off"
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "administrative",
+                              "stylers": [
+                                  {
+                                      "visibility": "off"
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "road",
+                              "elementType": "geometry.fill",
+                              "stylers": [
+                                  {
+                                      "color": "#000000"
+                                  },
+                                  {
+                                      "weight": 1
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "road",
+                              "elementType": "geometry.stroke",
+                              "stylers": [
+                                  {
+                                      "color": "#000000"
+                                  },
+                                  {
+                                      "weight": 0.8
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "landscape",
+                              "stylers": [
+                                  {
+                                      "color": "#ffffff"
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "water",
+                              "stylers": [
+                                  {
+                                      "visibility": "off"
+                                  }
+                              ]
+                          },
+                          {
+                              "featureType": "transit",
+                              "stylers": [
+                                  {
+                                      "visibility": "off"
+                                  }
+                              ]
+                          },
+                          {
+                              "elementType": "labels",
+                              "stylers": [
+                                  {
+                                      "visibility": "off"
+                                  }
+                              ]
+                          },
+                          {
+                              "elementType": "labels.text",
+                              "stylers": [
+                                  {
+                                      "visibility": "on"
+                                  }
+                              ]
+                          },
+                          {
+                              "elementType": "labels.text.stroke",
+                              "stylers": [
+                                  {
+                                      "color": "#ffffff"
+                                  }
+                              ]
+                          },
+                          {
+                              "elementType": "labels.text.fill",
+                              "stylers": [
+                                  {
+                                      "color": "#000000"
+                                  }
+                              ]
+                          },
+                          {
+                              "elementType": "labels.icon",
+                              "stylers": [
+                                  {
+                                      "visibility": "on"
+                                  }
+                              ]
+                          }
+                      ]
+                  };
+                  var mapElement = document.getElementById('map');
+
+                  var map = new google.maps.Map(mapElement, mapOptions);
+
+                  var marker = new google.maps.Marker({
+                      position: new google.maps.LatLng(44.787197,20.457273),
+                      map: map,
+                      title: 'Nasa lokacija!'
+                  });
+              }
+      }
+    </script>
+
+</body>
+</html>

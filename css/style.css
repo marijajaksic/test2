@@ -1,0 +1,56 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color:seashell(192, 168, 192);
+}
+.navbar-custom{
+    background-color:black;
+    border-bottom:solid wheat 3px;
+    color: white;
+}
+.navbar-brand{
+    color:black;
+}
+.nav-item{
+    font-size: 24px;
+    padding-right: 20px;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    text-decoration: underline;
+    color: red;
+}
+.navbar-collapse{
+    background-color: black;
+}
+
+
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: red;
+}
+.text {
+    text-decoration-color: bisque;
+}
+.span {
+    display: none;
+}
+.naslov{
+  padding:20px;
+  font-weight: bold;
+  font-size: 1.3em;
+  color: black;
+}
+.naslov p{
+  color:red (139, 33, 15);
+}
+.footer-text{
+  margin: 20px;
+  font-weight: bold;
+  font-size: 20px;
+  color: tomato;
+}

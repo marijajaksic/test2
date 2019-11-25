@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FIT GYM</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+
+    <style> p {
+        text-decoration-style: dashed;
+    }</style>
+
+</head>
+<body>
+    <nav class="navbar navbar-dark navbar-expand-lg navbar-custom">
+        <a href="#" class="navbar-brand"><img src="slike\logoo.png" alt="" height="120px"></a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myDropdown" aria-controls="myDropdown" >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        <div class="collapse navbar-collapse" id="myDropdown">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item ">
+                <a class="nav-link" href="index.html">POČETNA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="onama.html">O NAMA <span class="sr-only"></span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="programi.html">PROGRAMI</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="galerija.html">GALERIJA</a>
+                </li>
+              <li class="nav-item">
+                <a class="nav-link" href="eatfit.html">EAT FIT</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " href="kontakt.html">KONTAKT</a>
+              </li>
+            </ul>
+          </div>
+
+    </nav>
+
+    <div class="container-fluid">
+      <div class="text-center naslov">
+        <h1>O teretani FIT Gym</h1>
+
+      
+        <hr/>
+      </div>
+      <div class="container">
+          <h2>10 godina tradicije</h2>
+          <p>Fitness klub "FIT Gym" je oformljen 2009. godine. Na samom početku rada, klub je radio kao sekcija za aerobik i body building pri sportskom centru Partizan – Čukarica na Banovom brdu, a danas je jedna od vodećih teretana u Beogradu sa brojnim programima za vezbanje.</p>
+          <h2>Funkcionalnost</h2>
+          <p>Funkcionalnost kluba se ogleda u opremljenosti samog prostora, trenerima i pruženoj usluzi. U skladu sa ovim, sva 4 fitness studija raspolažu sa moderno dizajniranim enterijerom, ventilacijom, klimatizacijom, prijemnim delom, sportskim suplementima, svlačionicama sa ormarićima za garderobu, tuš kabinama, aerobik salom, profesionalnom Technogym Cardio i Strenght opremom i izuzetno prihvatljivim članarinama.</p>
+          <h2>Opremljenost</h2>
+          <p>Preko 60 Cardio Technogym mašina i preko 60 Technogym mašina sa opterećenjem i 25 klupa i sprava za vežbanje čine ovaj prostor potpunim, a vežbanje produktivnim.</p>
+          <h2>Stručnost</h2>
+          <p>Fakultet sporta i fizičke kulture  i nekoliko viših škola za sportske trenere čine bazu za instruktore i personalne trenere. Kako bismo pratili svetske trendove kada je fitness u pitanju, trudimo se da prikupimo što više informacija putem konvencija, interneta, časopisa, stručne literature i od naših kolega iz zemalja gde je fitness izuzetno razvijen.</p>
+          <h2>Besplatni probni trening</h2>
+          <p>Probni treninzi za sve naše fitness programe su na raspolaganju potencijalnim članovima. Uverite se i sami da su programi koje mi realizujemo kvalitetni, zdravi i praktični i da je upravo to ono što Vam je zaista i potrebno!</p>
+          <br><p>Postanite naš član i uživajte u napretku Vašeg duha i tela.</p>
+          <button type="button" onclick="pokaziOsoblje()" class="btn btn-dark">Pokaži osoblje</button>
+          <br/><hr/>
+          <div id="osoblje">
+          </div>
+     </div>
+    </div>
+    <footer>
+      <hr>
+      <div class="text-right">
+        <h5 class="footer-text"> by Aleksandra, Marija, Jelena
+          <script>
+          var dan = new Date();
+          var year = dan.getFullYear();
+          document.write('&copy;'+year);
+          </script>
+        </h5>
+      </div>
+    </footer>
+
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/skripte.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script>
+    function pokaziOsoblje(){
+      var nalepi = "";
+      nalepi+="<div class='row'>";
+      nalepi +="<div class='col-md-4'>";
+      nalepi +="<h3> Vlasnik </h3>";
+      nalepi +="<p> Katarina je vredna i preduzimljiva osoba, a dokaz za to je upravo osnivanje i dugogodišnje uspešno poslovanje teretane FIT gym </p>";
+      nalepi+="</div>";
+
+      nalepi +="<div class='col-md-4'>";
+     
+      nalepi +="<h3> Glavni Trener </h3>";
+      nalepi +="<p> Filip je odgovoran, vredan, uporan, spreman na timski rad i uvek tu za naše korisnike</p>";
+      nalepi+="</div>";
+
+      nalepi +="<div class='col-md-4'>";
+      nalepi +="<h3> Fitness instruktor </h3>";
+      nalepi +="<p> Dejana je komunikativna, odgovorna,i savesna osoba, spremna je za rad i postizanje rezultata </p>";
+      nalepi+="</div>";
+
+      nalepi+="</div>";
+
+      $("#osoblje").html(nalepi);
+      window.scrollTo(0, 2000);
+    }
+    </script>
+
+</body>
+</html>
